@@ -29,7 +29,7 @@ Note If it is dvd, then run:
 
                           sudo vi /etc/yum.repos.d/rhel9-local.repo
                           
-   2. Next we will paste the following command into the the file
+   2. Next we will paste the following command into the the file then save and close the file.
       
                           [Local-BaseOS]
                           name=Red Hat Enterprise Linux 9 - BaseOS
@@ -48,5 +48,26 @@ Note If it is dvd, then run:
                           gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release   
                           
                           
+## 4. Flush Yum/DNF & Subscription Manager Cache          
+
+   Next, We execute following commands to clean yum or dnf and subscription manager cache.
+   
+                           sudo dnf clean all
+                           
+                           sudo subscription-manager clean
                           
+Note: The output of the above command will give a warning message saying ‘This system is not registered with an entitlement’. In other to suppress this warning message, edit the file  ‘/etc/yum/pluginconf.d/subscription-manager.conf’ , change the parameter ‘enabled=1’ to ‘enabled=0’. Then save and close th file.
+
+                           sudo vi /etc/yum/pluginconf.d/subscription-manager.conf
+                           
+## 5. Install Packages using Local Repository    
+
+Now we can test our local repository. Run beneath command to view configure repository.
+
+                           sudo dnf repolist
+                           
+                           sudo dnf install nfs-utils
+                           
+                           sudo yum update 
+                                               
                  
