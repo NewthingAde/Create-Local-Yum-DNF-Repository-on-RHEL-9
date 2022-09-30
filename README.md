@@ -2,14 +2,14 @@
 How to Create Local Yum/DNF Repository on RHEL 9. This will help us to use Redhat without subscription to install packages.
 
 ## Prerequisites for creating local Yum/DNF repository
-      1. Minimal Install RHEL 9 system
-      2. Sudo User with admin privileges
-      3. RHEL 9 DVD or ISO file
+   1. Minimal Install RHEL 9 system
+   2. Sudo User with admin privileges
+   3. RHEL 9 DVD or ISO file
 
 ## 1. Download VM
 
-      1. Download a VM and install Redhat Linux Enterprise 9 on. Ensure that either workspace or GUI is used. Don't use the Redhat server. The reason is            because we will need to download a disk image in our virtual machine
-      2. Download the Redhat Enterprise disk image 
+   1. Download a VM and install Redhat Linux Enterprise 9 on. Ensure that either workspace or GUI is used. Don't use the Redhat server. The reason is             because we will need to download a disk image in our virtual machine
+   2. Download the Redhat Enterprise disk image 
 
 ## 2. Mount RHEL ISO File or DVD 
 
@@ -25,11 +25,11 @@ Note If it is dvd, then run:
                           
 ## 3. Next Create Repo File in ‘/etc/yum.repos.d/’ Directory
 
-      1. Next step is to create a repo file with name ‘rhel9-local.repo’ under the folder /etc/yum.repos.d/
+   1. Next step is to create a repo file with name ‘rhel9-local.repo’ under the folder /etc/yum.repos.d/
 
                           sudo vi /etc/yum.repos.d/rhel9-local.repo
                           
-      2. Next we will paste the following command into the the file
+   2. Next we will paste the following command into the the file
       
                           [Local-BaseOS]
                           name=Red Hat Enterprise Linux 9 - BaseOS
